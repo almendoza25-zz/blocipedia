@@ -7,6 +7,9 @@
  
  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
  gem 'rails', '~> 5.1.2'
+
+ #CSS Bootstrap
+ gem 'bootstrap-sass'
  
  group :production do
    # Use pg as the production database for Active Record
