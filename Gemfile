@@ -8,6 +8,9 @@
  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
  gem 'rails', '~> 5.1.2'
 
+ # Device Authentication
+ gem 'devise'
+
  #CSS Bootstrap
  gem 'bootstrap-sass'
  
@@ -17,10 +20,11 @@
    gem 'rails_12factor'
  end
  
- group :development do
+ group :development, :test do
    # Use sqlite3 as the development database for Active Record
    gem 'sqlite3'
    gem 'web-console', '~> 2.0'
+   gem 'rspec-rails', '~> 3.0'
  end
  
  # Use Puma as the app server
