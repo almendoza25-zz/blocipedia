@@ -6,6 +6,6 @@ class Wiki < ApplicationRecord
   private 
 
   def default_values
-    self.private == false
+    self.private ||= false
   end
 end

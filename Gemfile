@@ -13,6 +13,8 @@
 
  #CSS Bootstrap
  gem 'bootstrap-sass'
+
+ gem 'pundit'
  
  group :production do
    # Use pg as the production database for Active Record
