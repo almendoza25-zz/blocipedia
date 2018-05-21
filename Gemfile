@@ -17,6 +17,10 @@
  gem 'pundit'
 
  gem 'faker'
+
+ gem 'figaro', '1.0'
+
+ gem 'stripe'
  
  group :production do
    # Use pg as the production database for Active Record

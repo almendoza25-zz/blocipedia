@@ -2,6 +2,12 @@
 <div class="jumbotron">
   <h1>Blocipedia</h1>
   <p>Blocipedia is simple replica of Wikipedia</p>
-
+  <div class="text-center container">
+    <%= link_to "Wiki", wikis_path, class: "btn btn-secondary btn-lg left-button" %>
+    <% if current_user.standard? %>
+      <%= link_to "Upgrade Account", new_charge_path, class: "btn btn-secondary btn-lg right-button" %>
+    <% else %>
+      <%= link_to "Downgrade Account", downgrade_new_path, class: "btn btn-secondary btn-lg right-button" %>
+    <% end %>
+  </div>
 </div>
-
