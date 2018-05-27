@@ -1,4 +1,6 @@
 class WikisController < ApplicationController
+  before_action :require_sign_in, except: :show
+
   def index
     @wikis = Wiki.all
     authorize @wikis
@@ -7,6 +9,11 @@ class WikisController < ApplicationController
   def show
     @wiki = Wiki.find(params[:id])
     authorize @wiki
+
+    unless (@wiki.private == false) || @wiki.user == current_user || current_user.admin?
+      flash[:alert] = "You are not authorized to view this wiki."
+      redirect_to wikis_path
+    end
   end
 
   def new
